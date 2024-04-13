@@ -194,6 +194,7 @@
 \DeclareMathOperator{\boundary}{bd}
 
 \newcommand{\differentiate}[1]{\dfrac{\dd}{\dd{#1}}}
+\newcommand{\pdifferentiate}[1]{\dfrac{\partial}{\partial {#1}}}
 \newcommand{\derivative}[2]{\dfrac{\dd{#1}}{\dd{#2}}}
 \newcommand{\scndderivative}{D^2\!\,}
 \newcommand{\highderivative}[1]{D^{#1}\!\,}
@@ -315,6 +316,60 @@
         \item $y=\dfrac{e^x}{1-e^x}$.
     \end{enumerate}
 \end{question}
+\newpage
 
+\begin{example}
+    Compute $\differentiate{x}\left(\sin\left(\cos 5x\right)\right)$.
+\end{example}
+\vspace{8em}
+
+\begin{example}
+    Compute $\differentiate{x}\left(\sin\left(3\cos x\right)\right)$.
+\end{example}
+\vspace{8em}
+
+\begin{example}
+    Compute $\differentiate{x}\left(\sin\left(\cos bx\right)\right)$ for $b\in\bbR^+$.
+\end{example}
+\vspace{8em}
+
+\begin{example}
+    Compute $\differentiate{x}\left(\sin\left(a\cos x\right)\right)$ for $a\in\bbR^+$.
+\end{example}
+\vspace{8em}
+
+\begin{example}
+    Compute $\differentiate{x}\left(\sin\left(a\cos bx\right)\right)$ for $a, b\in\bbR^+$.
+\end{example}
+\vspace{8em}
+
+\begin{example}
+    Compute $\pderivative{w}{x}$ for $w=\sin\left(y\cos x\right)$.
+\end{example}
+\vspace{8em}
+
+\begin{example}
+    Compute $\pderivative{w}{x}$ for $w=z\sin\left(\cos x\right)$.
+\end{example}
+\vspace{8em}
+
+\begin{example}
+    Compute $\pderivative{w}{x}$ for $w=z\sin\left(y\cos x\right)$.
+\end{example}
+\vspace{8em}
+
+\begin{example}
+    Find the first derivatives of the following functions:
+    \begin{enumerate}
+        \item $w=x^4+5xy^3$;
+        \item $w=x^2y-3y^4$;
+        \item $w=x^3\sin y$;
+        \item $w=e^{xt}$;
+        \item $w=\ln(x+t^2)$;
+        \item $w=\dfrac{e^x}{u+v^2}$;
+        \item $w=x^y$; and
+        \item $w=\ln(x+2y+3z)$.
+    \end{enumerate}
+\end{example}
 
 \end{document}
