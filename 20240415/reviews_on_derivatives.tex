@@ -1,0 +1,320 @@
+% LaTeX Template For MATH 490 @ VCU
+\documentclass[11pt]{article}
+
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{mathtools}
+\usepackage{mdframed}
+\usepackage{tocloft}
+\usepackage{tcolorbox}
+\usepackage{extarrows}
+
+\setlist{nosep}
+% \setlist[enumerate]{label=(\alph*)}
+
+\renewcommand{\arraystretch}{0.75}
+
+\definecolor{defcolor}{RGB}{255,236,236}    % light red
+\definecolor{ngtcolor}{RGB}{255,242,242}    % lighter red
+\definecolor{lnkcolor}{RGB}{0,0,180}        % blue
+\definecolor{thmcolor}{RGB}{236,236,255}    % light blue
+\definecolor{lemcolor}{RGB}{239,239,255}    % lighter blue
+\definecolor{procolor}{RGB}{242,242,255}    % lighter lighter blue
+\definecolor{crlcolor}{RGB}{245,245,255}    % lighter lighter lighter blue
+\definecolor{xmpcolor}{RGB}{255,240,225}    % light orange
+\definecolor{rmkcolor}{RGB}{233,255,235}    % light green
+\definecolor{axicolor}{RGB}{255,255,233}    % light yellow
+\definecolor{notcolor}{RGB}{255,255,244}    % lighter yellow
+\definecolor{whacolor}{RGB}{250,250,250}    % lighter gray
+\definecolor{reccolor}{RGB}{255,244,255}    % lighter purple
+
+\hypersetup{
+    colorlinks,
+    citecolor=lnkcolor,
+    filecolor=lnkcolor,
+    linkcolor=lnkcolor,
+    urlcolor=lnkcolor
+}
+
+\newtheoremstyle{break}
+    {\topsep/1.5} % space above
+    {\topsep/2.2} % space below
+    {}          % body font
+    {}          % indent amount
+    {\rmfamily} % theorem head font
+    {.}          % punctuation after theorem head
+    {\newline}  % space after theorem head
+    {\textbf{\thmname{#1}\thmnumber{ #2}}\thmnote{\text{ (#3)}}}
+                % theorem hed spec. (empty = "normal")
+
+\theoremstyle{break}
+\newmdtheoremenv[
+    backgroundcolor=thmcolor,
+    linecolor=black,
+    linewidth=1pt,
+    topline=true,
+    bottomline=true,
+    rightline=true,
+    skipabove=\topsep/1.5,
+    skipbelow=\topsep/2.2
+]{theorem}{Theorem}[section]
+\newmdtheoremenv[
+    backgroundcolor=crlcolor,
+    linecolor=black,
+    linewidth=1pt,
+    topline=true,
+    bottomline=true,
+    rightline=true,
+    skipabove=\topsep/1.5,
+    skipbelow=\topsep/2.2
+]{corollary}[theorem]{Corollary}
+\newmdtheoremenv[
+    backgroundcolor=lemcolor,
+    linecolor=black,
+    linewidth=1pt,
+    topline=true,
+    bottomline=true,
+    rightline=true,
+    skipabove=\topsep/1.5,
+    skipbelow=\topsep/2.2
+]{lemma}[theorem]{Lemma}
+\newmdtheoremenv[
+    backgroundcolor=axicolor,
+    linecolor=black,
+    linewidth=1pt,
+    topline=true,
+    bottomline=true,
+    rightline=true,
+    skipabove=\topsep/1.5,
+    skipbelow=\topsep/2.2
+]{axiom}[theorem]{Axiom}
+\newmdtheoremenv[
+    backgroundcolor=procolor,
+    linecolor=black,
+    linewidth=1pt,
+    topline=true,
+    bottomline=true,
+    rightline=true,
+    skipabove=\topsep/1.5,
+    skipbelow=\topsep/2.2
+]{proposition}[theorem]{Proposition}
+\newmdtheoremenv[
+    backgroundcolor=notcolor,
+    linecolor=black,
+    linewidth=1pt,
+    topline=true,
+    bottomline=true,
+    rightline=true,
+    skipabove=\topsep/1.5,
+    skipbelow=\topsep/2.2
+]{notation}[theorem]{Notation}
+\newmdtheoremenv[
+    backgroundcolor=defcolor,
+    linecolor=black,
+    linewidth=1pt,
+    topline=true,
+    bottomline=true,
+    rightline=true,
+    skipabove=\topsep/1.5,
+    skipbelow=\topsep/2.2
+]{definition}[theorem]{Definition}
+\newmdtheoremenv[
+    backgroundcolor=ngtcolor,
+    linecolor=black,
+    linewidth=1pt,
+    topline=true,
+    bottomline=true,
+    rightline=true,
+    skipabove=\topsep/1.5,
+    skipbelow=\topsep/2.2
+]{negation}[theorem]{Negation}
+\newmdtheoremenv[
+    backgroundcolor=rmkcolor,
+    linecolor=black,
+    linewidth=1pt,
+    topline=true,
+    bottomline=true,
+    rightline=true,
+    skipabove=\topsep/1.5,
+    skipbelow=\topsep/2.2
+]{remark}[theorem]{Remark}
+\newmdtheoremenv[
+    backgroundcolor=xmpcolor,
+    linecolor=black,
+    linewidth=1pt,
+    topline=true,
+    bottomline=true,
+    rightline=true,
+    skipabove=\topsep/1.5,
+    skipbelow=\topsep/2.2
+]{example}[theorem]{Example}
+\newmdtheoremenv[
+    backgroundcolor=whacolor,
+    linecolor=black,
+    linewidth=1pt,
+    topline=true,
+    bottomline=true,
+    rightline=true,
+    skipabove=\topsep/1.5,
+    skipbelow=\topsep/2.2
+]{problem}[theorem]{Problem}
+\newmdtheoremenv[
+    backgroundcolor=whacolor,
+    linecolor=black,
+    linewidth=1pt,
+    topline=true,
+    bottomline=true,
+    rightline=true,
+    skipabove=\topsep/1.5,
+    skipbelow=\topsep/2.2
+]{question}[theorem]{Question}
+\newmdtheoremenv[
+    backgroundcolor=reccolor,
+    linecolor=black,
+    linewidth=1pt,
+    topline=true,
+    bottomline=true,
+    rightline=true,
+    skipabove=\topsep/1.5,
+    skipbelow=\topsep/2.2
+]{recall}[theorem]{Recall}
+
+\DeclareMathOperator{\arcsec}{arcsec}
+\DeclareMathOperator{\arccot}{arccot}
+\DeclareMathOperator{\arccsc}{arccsc}
+\DeclareMathOperator{\interior}{int}
+\DeclareMathOperator{\closure}{cl}
+\DeclareMathOperator{\boundary}{bd}
+
+\newcommand{\differentiate}[1]{\dfrac{\dd}{\dd{#1}}}
+\newcommand{\derivative}[2]{\dfrac{\dd{#1}}{\dd{#2}}}
+\newcommand{\scndderivative}{D^2\!\,}
+\newcommand{\highderivative}[1]{D^{#1}\!\,}
+\newcommand{\dirderivative}[1]{D_{#1}\!\,}
+\newcommand{\pderivative}[2]{\dfrac{\partial {#1}}{\partial {#2}}}
+\newcommand{\scndpderivative}[3]{\dfrac{\partial^2 {#1}}{\partial {#3}\partial {#2}}}
+\newcommand{\highpderivative}[4]{\dfrac{\partial^{#2} {#1}}{\partial{#4}\cdots\partial{#3}}}
+\newcommand{\dd}{\text{d}}
+\newcommand{\ddi}{\text{$\,$d}}
+\newcommand{\qqed}{{\hfill$\blacksquare$}}
+\newcommand{\defeq}{\overset{\text{def}}{=}}
+\newcommand{\transpose}{\text{T}}
+\newcommand{\bbR}{\mathbb{R}}
+\newcommand{\bbN}{\mathbb{N}}
+\newcommand{\calL}{\mathcal{L}}
+\newcommand{\bfa}{\textbf{a}}
+\newcommand{\bfc}{\textbf{c}}
+\newcommand{\bfe}{\textbf{e}}
+\newcommand{\bff}{\textbf{f}}
+\newcommand{\bfg}{\textbf{g}}
+\newcommand{\bfh}{\textbf{h}}
+\newcommand{\bfp}{\textbf{p}}
+\newcommand{\bfr}{\textbf{r}}
+\newcommand{\bfv}{\textbf{v}}
+\newcommand{\bfu}{\textbf{u}}
+\newcommand{\bfx}{\textbf{x}}
+\newcommand{\bfy}{\textbf{y}}
+\newcommand{\exercise}{This is an exercise left to the reader.}
+
+
+\linespread{1.9}
+\setlength{\textwidth}{6.9in}
+\setlength{\textheight}{9.2in}
+\setlength{\oddsidemargin}{-0.2in}
+\setlength{\evensidemargin}{-0.2in}
+\setlength{\topmargin}{-0.2in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\footskip}{0.5in}
+\setlength{\multicolsep}{6.2pt}
+\setlength{\belowdisplayskip}{0pt}
+%\setlength{\belowdisplayshortskip}{0pt}
+\setlength{\abovedisplayskip}{0pt}
+%\setlength{\abovedisplayshortskip}{0pt}
+
+\setcounter{section}{1}
+\numberwithin{equation}{theorem}
+
+\makeatletter
+\newcommand{\vast}{\bBigg@{4}}
+\newcommand{\Vast}{\bBigg@{5}}
+\makeatother
+
+\newcommand*\samethanks[1][\value{footnote}]{\footnotemark[#1]}
+
+\title{\textbf{Calculus A II One-to-One Tutoring}}
+\author{Chang, Yung-Hsuan}
+
+\begin{document}
+\maketitle
+
+\begin{question}[Some Basic Derivatives]
+    Find the derivative with respect to $x$ for the following functions: \vspace{-1.2em}
+    \begin{multicols}{4}
+        \begin{enumerate}
+            \item $y=x^n$;
+            \item $y=e^x$;
+            \item $y=a^x$;
+            \item $y=\ln x$;
+            \item $y=\log_a x$;
+            \item $y=\sin x$;
+            \item $y=\cos x$; and
+            \item $y=\tan x$;
+        \end{enumerate}
+    \end{multicols}
+    \vspace{0.01em}
+\end{question}
+\newpage
+
+\begin{question}[Utilizing the Chain Rule]
+    Find the derivative of the following functions: \vspace{-1.4em}
+    \begin{multicols}{2}
+        \begin{enumerate}
+            \item $y=\sqrt[3]{e^x+1}$;
+            \item $y=e^{\tan\theta}$;
+            \item $y=\sin\left(\dfrac{e^x}{1+e^x}\right)$;
+            \item $y=t\sin\left(\pi t\right)$;
+            \item $y=\sin(\ln x)$;
+            \item $y=\ln\left(\dfrac{x^a}{b^x}\right)$;
+            \item $y=\dfrac{1}{\ln x}$;
+            \item $y=\ln\left(\left(\sin x\right)^2\right)$; and
+            \item $y=\dfrac{\ln x}{1+\ln x}$.
+        \end{enumerate}
+    \end{multicols}
+    \vspace{0.01em}
+\end{question}
+\newpage
+
+\begin{question}[Applying the Chain Rule]
+    Use the fact that $|x|=\sqrt{x^2}$ to find $\differentiate{x}\left(|x|\right)$.
+\end{question}
+\newpage
+
+\begin{question}[Applying the Chain Rule]
+    Find the derivative of $y=x^x$. (Hint: take log to both sides.)
+\end{question}
+\newpage
+
+\begin{question}
+    Find the derivative of the following functions:
+    \begin{enumerate}
+        \item $y=\sqrt[4]{x\sqrt[3]{x\sqrt{x}}}$;
+        \item $y=(x-3)\sqrt{x^2+2x+3}$;
+        \item $y=x^{\left(\ln x\right)^{111}}$;
+        \item $y=\cos(\sin 3x)$;
+        \item $y=e^t(1+te^t)$;
+        \item $y=x^3e^x$;
+        \item $y=\dfrac{x}{e^x}$; and
+        \item $y=\dfrac{e^x}{1-e^x}$.
+    \end{enumerate}
+\end{question}
+
+
+\end{document}
