@@ -1,11 +1,11 @@
 # Fdb version 4
-["xdvipdfmx"] 1713193719 "reviews_on_derivatives.xdv" "reviews_on_derivatives.pdf" "reviews_on_derivatives" 1713193720 0
-  "reviews_on_derivatives.xdv" 1713193719 27436 d3fa808ceb540d85a7f3812ccadfc79f "xelatex"
+["xdvipdfmx"] 1713245407 "reviews_on_derivatives.xdv" "reviews_on_derivatives.pdf" "reviews_on_derivatives" 1713245407 0
+  "reviews_on_derivatives.xdv" 1713245407 27512 042a78ba28898c164f5a1d0484186dbb "xelatex"
   (generated)
   "reviews_on_derivatives.pdf"
   (rewritten before read)
-["xelatex"] 1713193719 "/Users/eiken/Visual Studio/Github_Clone/2024_II_Tutor/20240415/reviews_on_derivatives.tex" "reviews_on_derivatives.xdv" "reviews_on_derivatives" 1713193720 0
-  "/Users/eiken/Visual Studio/Github_Clone/2024_II_Tutor/20240415/reviews_on_derivatives.tex" 1713193719 10298 d093f247f8dd20bc8da84b4c100b6744 ""
+["xelatex"] 1713245406 "/Users/eiken/Visual Studio/Github_Clone/2024_II_Tutor/20240415/reviews_on_derivatives.tex" "reviews_on_derivatives.xdv" "reviews_on_derivatives" 1713245407 0
+  "/Users/eiken/Visual Studio/Github_Clone/2024_II_Tutor/20240415/reviews_on_derivatives.tex" 1713245406 10306 32492632eb9e25f4e78c1f1ec72ec0a8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136768653 1528 f853c4d1b4e0550255e02831fdc8496f ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -159,9 +159,9 @@
   "/usr/local/texlive/2023/texmf-dist/web2c/texmf.cnf" 1677365944 40745 87bb86a62d462f93a1efc6b0c65c872e ""
   "/usr/local/texlive/2023/texmf-var/web2c/xetex/xelatex.fmt" 1708868527 10502812 d9bc4cbf3c65ef7eed6035287310d941 ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
-  "reviews_on_derivatives.aux" 1713193719 555 79d6996a539c859f65a3c62bf3ae862b "xelatex"
-  "reviews_on_derivatives.out" 1713193719 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
-  "reviews_on_derivatives.tex" 1713193719 10298 d093f247f8dd20bc8da84b4c100b6744 ""
+  "reviews_on_derivatives.aux" 1713245407 555 79d6996a539c859f65a3c62bf3ae862b "xelatex"
+  "reviews_on_derivatives.out" 1713245407 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
+  "reviews_on_derivatives.tex" 1713245406 10306 32492632eb9e25f4e78c1f1ec72ec0a8 ""
   (generated)
   "reviews_on_derivatives.aux"
   "reviews_on_derivatives.log"
