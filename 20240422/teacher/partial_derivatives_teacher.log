@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.5) (preloaded format=xelatex 2023.7.3)  21 APR 2024 17:36
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.5) (preloaded format=xelatex 2023.7.3)  21 APR 2024 18:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"e:/Eiken/Visual Studio Code Git Sync/2024_II_Tutor/20240408/derivatives.tex"
-(e:/Eiken/Visual Studio Code Git Sync/2024_II_Tutor/20240408/derivatives.tex
+**"e:/Eiken/Visual Studio Code Git Sync/2024_II_Tutor/20240422/teacher/partial_derivatives_teacher.tex"
+(e:/Eiken/Visual Studio Code Git Sync/2024_II_Tutor/20240422/teacher/partial_derivatives_teacher.tex
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-06-16>
 (D:\Program Files\MiKTeX\tex/latex/base\article.cls
@@ -706,66 +706,78 @@ Package: extarrows 2020/03/12 v1.2.0 Some extensible arrows
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 44.
 \c@theorem=\count327
- (derivatives.aux)
-\openout1 = `derivatives.aux'.
+ (partial_derivatives_teacher.aux)
+\openout1 = `partial_derivatives_teacher.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 255.
-LaTeX Font Info:    ... okay on input line 255.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 255.
-LaTeX Font Info:    ... okay on input line 255.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 255.
-LaTeX Font Info:    ... okay on input line 255.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 255.
-LaTeX Font Info:    ... okay on input line 255.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 255.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 255.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 256.
+LaTeX Font Info:    ... okay on input line 256.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 256.
+LaTeX Font Info:    ... okay on input line 256.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 256.
+LaTeX Font Info:    ... okay on input line 256.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 256.
+LaTeX Font Info:    ... okay on input line 256.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 256.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 256.
  (D:\Program Files\MiKTeX\tex/latex/base\ts1cmr.fd
 File: ts1cmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 255.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 255.
-LaTeX Font Info:    ... okay on input line 255.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 255.
-LaTeX Font Info:    ... okay on input line 255.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 255.
-LaTeX Font Info:    ... okay on input line 255.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 255.
-LaTeX Font Info:    ... okay on input line 255.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 255.
-LaTeX Font Info:    ... okay on input line 255.
-Package hyperref Info: Link coloring ON on input line 255.
- (derivatives.out) (derivatives.out)
+LaTeX Font Info:    ... okay on input line 256.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 256.
+LaTeX Font Info:    ... okay on input line 256.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 256.
+LaTeX Font Info:    ... okay on input line 256.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 256.
+LaTeX Font Info:    ... okay on input line 256.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 256.
+LaTeX Font Info:    ... okay on input line 256.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 256.
+LaTeX Font Info:    ... okay on input line 256.
+Package hyperref Info: Link coloring ON on input line 256.
+ (partial_derivatives_teacher.out) (partial_derivatives_teacher.out)
 \@outlinefile=\write4
-\openout4 = `derivatives.out'.
+\openout4 = `partial_derivatives_teacher.out'.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 257.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 258.
  (D:\Program Files\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 257.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 258.
  (D:\Program Files\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 258.
+(mdframed)              on input line 259.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 262.
+(mdframed)              on input line 263.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 268.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 272.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 276.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 286.
-Package mdframed Info: Not enough space on this page on input line 288.
+Package mdframed Info: Not enough space on this page on input line 278.
  [1
 
 ]
-Package mdframed Info: Not enough space on this page on input line 288.
+Package mdframed Info: Not enough space on this page on input line 278.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 291.
+(mdframed)              on input line 280.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 284.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 288.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 292.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 296.
@@ -774,101 +786,48 @@ Package mdframed Info: mdframed detected package amsthm
 (mdframed)              on input line 301.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 306.
+(mdframed)              on input line 305.
+Package mdframed Info: Not enough space on this page on input line 311.
  [2]
-Package mdframed Info: Not enough space on this page on input line 308.
+Package mdframed Info: Not enough space on this page on input line 311.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 311.
+(mdframed)              on input line 313.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 316.
+(mdframed)              on input line 317.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 321.
+ [3]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 326.
- [3]
-Package mdframed Info: Not enough space on this page on input line 328.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 331.
+Package mdframed Info: Not enough space on this page on input line 334.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 336.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 341.
+(mdframed)              on input line 340.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 346.
- [4]
-Package mdframed Info: Not enough space on this page on input line 348.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 351.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 356.
- [5]
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 362.
-Package mdframed Info: Not enough space on this page on input line 374.
- [6]
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 377.
-Package mdframed Info: Not enough space on this page on input line 380.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 382.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 387.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 392.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 397.
- [7]
-Package mdframed Info: Not enough space on this page on input line 399.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 402.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 407.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 412.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 417.
- [8]
-Package mdframed Info: Not enough space on this page on input line 419.
- [9]
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 423.
-Package mdframed Info: Not enough space on this page on input line 437.
- [10] [11] (derivatives.aux)
+(mdframed)              on input line 344.
+ [4] (partial_derivatives_teacher.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-06-16>
  ***********
-Package rerunfilecheck Info: File `derivatives.out' has not changed.
+Package rerunfilecheck Info: File `partial_derivatives_teacher.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 22285 strings out of 411164
- 406974 string characters out of 5814263
- 1866394 words of memory out of 5000000
- 42494 multiletter control sequences out of 15000+600000
- 519996 words of font info for 66 fonts, out of 8000000 for 9000
+ 22296 strings out of 411164
+ 407598 string characters out of 5814263
+ 1862394 words of memory out of 5000000
+ 42501 multiletter control sequences out of 15000+600000
+ 520012 words of font info for 68 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 101i,9n,107p,610b,599s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 101i,10n,107p,634b,478s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on derivatives.xdv (11 pages, 47264 bytes).
+Output written on partial_derivatives_teacher.xdv (4 pages, 32828 bytes).

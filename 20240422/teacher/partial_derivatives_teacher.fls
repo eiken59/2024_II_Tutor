@@ -1,7 +1,7 @@
-PWD e:\Eiken\Visual Studio Code Git Sync\2024_II_Tutor\20240408
+PWD e:\Eiken\Visual Studio Code Git Sync\2024_II_Tutor\20240422\teacher
 INPUT C:\Users\yungh\AppData\Local\MiKTeX\miktex\data\le\xetex\xelatex.fmt
-INPUT e:\Eiken\Visual Studio Code Git Sync\2024_II_Tutor\20240408\derivatives.tex
-OUTPUT derivatives.log
+INPUT e:\Eiken\Visual Studio Code Git Sync\2024_II_Tutor\20240422\teacher\partial_derivatives_teacher.tex
+OUTPUT partial_derivatives_teacher.log
 INPUT D:\Program Files\MiKTeX\tex\latex\base\article.cls
 INPUT D:\Program Files\MiKTeX\tex\latex\base\article.cls
 INPUT D:\Program Files\MiKTeX\tex\latex\base\size11.clo
@@ -230,20 +230,20 @@ INPUT D:\Program Files\MiKTeX\tex\latex\trimspaces\trimspaces.sty
 INPUT D:\Program Files\MiKTeX\tex\latex\trimspaces\trimspaces.sty
 INPUT D:\Program Files\MiKTeX\tex\latex\extarrows\extarrows.sty
 INPUT D:\Program Files\MiKTeX\tex\latex\extarrows\extarrows.sty
-INPUT .\derivatives.aux
-INPUT .\derivatives.aux
-INPUT derivatives.aux
-OUTPUT derivatives.aux
+INPUT .\partial_derivatives_teacher.aux
+INPUT .\partial_derivatives_teacher.aux
+INPUT partial_derivatives_teacher.aux
+OUTPUT partial_derivatives_teacher.aux
 INPUT D:\Program Files\MiKTeX\tex\latex\base\ts1cmr.fd
 INPUT D:\Program Files\MiKTeX\tex\latex\base\ts1cmr.fd
 INPUT D:\Program Files\MiKTeX\tex\latex\base\ts1cmr.fd
-INPUT .\derivatives.out
-INPUT .\derivatives.out
-INPUT derivatives.out
-INPUT derivatives.out
-INPUT .\derivatives.out
-INPUT .\derivatives.out
-OUTPUT derivatives.out
+INPUT .\partial_derivatives_teacher.out
+INPUT .\partial_derivatives_teacher.out
+INPUT partial_derivatives_teacher.out
+INPUT partial_derivatives_teacher.out
+INPUT .\partial_derivatives_teacher.out
+INPUT .\partial_derivatives_teacher.out
+OUTPUT partial_derivatives_teacher.out
 INPUT D:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
 INPUT D:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr8.tfm
 INPUT D:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr6.tfm
@@ -274,7 +274,7 @@ INPUT D:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
 INPUT D:\Program Files\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
 INPUT D:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
 INPUT D:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
-OUTPUT derivatives.xdv
-INPUT derivatives.aux
-INPUT .\derivatives.out
-INPUT .\derivatives.out
+OUTPUT partial_derivatives_teacher.xdv
+INPUT partial_derivatives_teacher.aux
+INPUT .\partial_derivatives_teacher.out
+INPUT .\partial_derivatives_teacher.out

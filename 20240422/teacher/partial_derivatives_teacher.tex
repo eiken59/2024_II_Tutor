@@ -194,6 +194,7 @@
 \DeclareMathOperator{\boundary}{bd}
 
 \newcommand{\differentiate}[1]{\dfrac{\dd}{\dd{#1}}}
+\newcommand{\pdifferentiate}[1]{\dfrac{\partial}{\partial {#1}}}
 \newcommand{\derivative}[2]{\dfrac{\dd{#1}}{\dd{#2}}}
 \newcommand{\scndderivative}{D^2\!\,}
 \newcommand{\highderivative}[1]{D^{#1}\!\,}
@@ -239,7 +240,7 @@
 \setlength{\abovedisplayskip}{0pt}
 %\setlength{\abovedisplayshortskip}{0pt}
 
-\setcounter{section}{1}
+\setcounter{section}{3}
 \numberwithin{equation}{theorem}
 
 \makeatletter
@@ -255,189 +256,95 @@
 \begin{document}
 \maketitle
 
-\begin{question}
-    Evaluate $\displaystyle\sum_{i=1}^\infty\left(\dfrac{1}{2}\right)^i$.
-\end{question}
-
-\begin{theorem}[Formulae about Derivatives]
-    The symbol $x$ denotes a variable. The symbols $a, r$ are constant and are in $\bbR^+, \bbR$, respectively. \vspace{-1.8em}
-    \begin{multicols}{2}
-        \begin{enumerate}
-            \item $\differentiate{x}\left(x^r\right)=rx^{r-1}$;
-            \item $\differentiate{x}\left(a^x\right)=\ln a\cdot a^x$;
-            \item $\differentiate{x}\left(\ln x\right)=\dfrac{1}{x}$;
-            \item $\differentiate{x}(\sin x)=\cos x$; and
-            \item $\differentiate{x}(\cos x)=-\sin x$.
-        \end{enumerate}
-    \end{multicols}
-    \vspace{0.2em}
-\end{theorem}
-
-\begin{theorem}[Operations on Derivatives]
-    Let $f(x)$ and $g(x)$ be differentiable. Then
-    \begin{enumerate}
-        \item $\differentiate{x}\left(f(x)+g(x)\right)=\derivative{f}{x}(x)+\derivative{g}{x}(x)$;
-        \item $\differentiate{x}\left(c\cdot f(x)\right)=c\cdot\derivative{f}{x}(x)$;
-        \item $\differentiate{x}\left(f(x)\cdot g(x)\right)=\derivative{f}{x}(x)\cdot g(x)+f(x)\cdot\derivative{g}{x}(x)$; and 
-        \item $\differentiate{x}\left(\dfrac{f(x)}{g(x)}\right)=\dfrac{\derivative{f}{x}(x)\cdot g(x)-f(x)\cdot\derivative{g}{x}(x)}{\left(g(x)\right)^2}$.
-    \end{enumerate}
-\end{theorem}
-
 \begin{example}
-    Find the derivative of $x^4$ with respect to $x$.
+    Compute all the first partial derivatives of $f(x, y)=x^3+x^2y^2-2y^2$.
 \end{example}
-\vspace{8em}
 
-\begin{example}
-    Find the derivative of $t^{100}$ with respect to $t$.
-\end{example}
-\vspace{8em}
-
-\begin{example}
-    Find the derivative of $\dfrac{1}{u}$ with respect to $u$.
-\end{example}
-\vspace{8em}
-
-\begin{example}
-    Find the derivative of $x\sqrt{x}$ with respect to $x$.
-\end{example}
-\vspace{8em}
-
-\begin{example}
-    Find the derivative of $x^4-6x^2+4$ with respect to $x$.
-\end{example}
-\vspace{8em}
-
-\begin{example}
-    Find the derivative of $e^t+t^e$ with respect to $t$.
-\end{example}
-\vspace{8em}
-
-\begin{example}
-    Find the derivative of $x^{1000}$ with respect to $x$.
-\end{example}
-\vspace{8em}
-
-\begin{example}
-    Evaluate $\displaystyle\lim_{x\to 1}\dfrac{x^{1000}-1}{x-1}$.
-\end{example}
-\vspace{8em}
-
-\begin{example}
-    Find the derivative of $\dfrac{x^2+x-2}{x^3+6}$ with respect to $x$.
-\end{example}
-\vspace{8em}
-
-\begin{example}
-    Find the derivative of $\dfrac{e^x}{1-e^x}$ with respect to $x$.
-\end{example}
-\vspace{8em}
-
-\begin{example}
-    Find the derivative of $x^3e^x$ with respect to $x$.
-\end{example}
-\vspace{8em}
-
-\begin{example}
-    Find the derivative of $\sin\theta+\cos\theta$ with respect to $\theta$.
-\end{example}
-\vspace{8em}
-
-\begin{example}
-    Find the derivative of $\sin\theta\cdot\cos\theta$ with respect to $\theta$.
-\end{example}
-\vspace{8em}
-
-\begin{example}
-    Find the derivative of $\dfrac{\sin x}{\cos x}$ with respect to $x$.
-\end{example}
-\vspace{8em}
-
-\begin{example}
-    Find the derivative of $\dfrac{\cos\theta}{e^\theta}$ with respect to $\theta$.
-\end{example}
-\vspace{8em}
-
-\newpage
-\begin{question}
-    Find the derivative with respect to the corresponding variable for the following functions:
-    \begin{enumerate}
-        \item $f_1(x)=\pi^{25}$;
-        \item $f_2(x)=(4x^2+3)(2x+5)$;
-        \item $f_3(x)=\dfrac{x}{e^x}$;
-        \item $f_4(u)=\dfrac{6u^4-5u}{u+1}$;
-        \item $f_5(t)=\dfrac{t^4-5t^3+\sqrt{t}}{t^2}$;
-        \item $f_6(\theta)=\tan(\theta)$;
-        \item $f_7(\theta)=\sec(\theta)$; and
-        \item $f_8(x)=e^x\cos x+\sin x$.
-    \end{enumerate}
-\end{question}
-\newpage
-
-\begin{theorem}[Chain Rule]
+\begin{recall}[Chain Rule]
     If $g$ is differentiable at $x$ and $f$ is differentiable at $g(x)$, then $(f\circ g)(x)$ is differentiable at $x$ and $$\differentiate{x}\left((f\circ g)(x)\right)=\derivative{f}{x}(g(x))\cdot\derivative{g}{x}(x).$$
     In Leibniz notation, if $y=f(u)$ and $u=g(x)$ are both differentiable, then $$\derivative{y}{x}=\derivative{y}{u}\cdot\derivative{u}{x}.$$
+\end{recall}
+
+\begin{theorem}[Chain Rule]
+    Let $z=f(x, y), x=x(t), y=y(t)$. Then $$\derivative{z}{t}=\pderivative{z}{x}\cdot\derivative{x}{t}+\pderivative{z}{y}\cdot\derivative{y}{t}.$$
 \end{theorem}
 
 \begin{example}
-    Find the derivative of $\left(x^3-1\right)^{100}$ with respect to $x$.
+    Let $z=x^2y+3xy^4$ with $(x, y)=(\sin(2t), \cos(t))$. Compute $\derivative{z}{t}$.
 \end{example}
-\vspace{8em}
 
 \begin{example}
-    Find the derivative of $\left(\dfrac{t-1}{2t+1}\right)^{9}$ with respect to $t$.
+    Let $u=x^4y+y^2z^3$ with $(x, y, z)=(rse^t, rs^2e^{-t}, r^2s\sin(t))$. Compute $\pderivative{u}{s}$.
 \end{example}
-\vspace{8em}
 
 \begin{example}
-    Find the derivative of $\dfrac{1}{\sin u}$ with respect to $u$.
+    Compute all first partial derivatives for $f(x, y)=e^{\sqrt{x^2+y}}$.
 \end{example}
-\vspace{8em}
 
 \begin{example}
-    Find the derivative of $x^4-6x^2+4$, where $x=\sin v$, with respect to $v$.
+    Let $z=x^2+y^2$ with $(x, y)=(t-\cos t, 1-\sin t)$. Compute $\derivative{z}{t}$.
 \end{example}
-\vspace{8em}
 
 \begin{example}
-    Find the derivative of $\left(e^{\sin x}\right)^{100}$ with respect to $x$.
+    Compute all first partial derivatives for $f(x, y)=\arcsin\left(\dfrac{x^2-y^2}{x^2+y^2}\right)$ with $xy>0$.
 \end{example}
-\vspace{8em}
 
 \begin{example}
-    Find the derivative of $e^{e^x}$ with respect to $x$.
+    Let $z=e^{xy}$ with $(x, y)=\left(\ln\sqrt{u^2+v^2}, \arctan\dfrac{v}{u}\right)$. Compute $\pderivative{z}{u}$.
 \end{example}
-\vspace{8em}
+
+\begin{definition}[Directional Derivative]
+    Let $f$ be a real-valued function of two variables. The directional derivative of $f$ at $(x_0, y_0)$ for the direction $\hat{\bfu}= (u_1, u_2)$ (a unit vector) is defined when the following limit exists:
+    $$\dirderivative{\hat{\bfu}}f(x_0, y_0)=\lim_{h\to 0}\dfrac{f(x_0+hu_1, y_0+hu_2)-f(x_0, y_0)}{h}.$$
+\end{definition}
+
+\begin{remark}
+    In the previous definition, if $\hat{\bfu}=(1, 0)$, then $$\dirderivative{\hat{\bfu}}f(x_0, y_0)=\pderivative{f}{x}(x_0, y_0).$$
+\end{remark}
 
 \begin{example}
-    Find the derivative of $\sin(\cos x)$ with respect to $x$.
+    Determine the directional derivative of $$f(x, y)=\left\{\begin{array}{ll}
+        \dfrac{xy}{x^2+y^2}, \quad&\text{if\ }(x, y)\ne(0, 0);\\
+        0, &\text{if\ }(x, y)=(0, 0),
+    \end{array}\right.$$
+    for the direction $(1, 1)$ at $(0, 0)$.
 \end{example}
-\vspace{8em}
 
 \begin{example}
-    Find the derivative of $\sin\left(\dfrac{e^x}{1-e^x}\right)$ with respect to $x$.
+    Determine the directional derivative of $f(x, y)=xy^2\arctan(z)$ for the direction $(1, 1, 1)$ at $(2, 1, 1)$.
 \end{example}
-\vspace{8em}
+
+\begin{definition}[Limit]
+    The limit $$\lim_{(x, y)\to(x_0, y_0)}f(x, y)=L$$ if for all $\varepsilon>0$ (the greek letter $\varepsilon$ stands for ``error''), there exists a $\delta>0$ (the greek letter $\delta$ stands for ``difference'') such that $\sqrt{(x-x_0)^2+(y-y_0)^2}<\delta$ implies $|f(x, y)-f(x_0, y_0)|<\varepsilon$.
+\end{definition}
+
+\begin{remark}
+    If there exist two path $C_1: y=f_1(x)$ and $C_2: y=f_2(x)$ such that $$\lim_{\substack{(x, y)\to(x_0, y_0)\\(x, y)\in C_1}}f(x, y)\ne\lim_{\substack{(x, y)\to(x_0, y_0)\\(x, y)\in C_2}}f(x, y),$$ then the limit $\displaystyle\lim_{(x, y)\to(x_0, y_0)}f(x, y)$ does not exist.
+\end{remark}
 
 \newpage
-\begin{question}
-    Find the derivative with respect to the corresponding variable for the following functions:
+\begin{example}
+    Determine the existance of $\displaystyle\lim_{(x, y)\to(0, 0)}f(x, y)$ for each of the following functions:
     \begin{enumerate}
-        \item $f_1(x)=\left(x^2+1\right)^{25}$;
-        \item $f_2(x)=\cos(x^2)$;
-        \item $f_3(x)=\left(\cos x\right)^2$;
-        \item $f_4(u)=e^{u^2-u}$;
-        \item $f_5(t)=e^{at}\sin(bt)$;
-        \item $f_6(\theta)=\cos(\sin(3\theta))$;
-        \item $f_7(\theta)=\sqrt{\theta+\sqrt{\theta}}$;
-        \item $f_8(x)=5^{\sqrt{x}+\sin(x)}$;
-        \item $f_9(x)=\ln(\sin x)$; and
-        \item $f_{10}(x)=e^{x^2\ln x}$.
+        \item $f(x, y)=\dfrac{x^2-y^2}{x^2+y^2}$;
+        \item $f(x, y)=\dfrac{xy}{x^2+y^2}$;
+        \item $f(x, y)=\dfrac{x^2y}{x^2+y^2}$; and
+        \item $f(x, y)=\dfrac{x^\frac{2}{3}\sin y}{x^2+y^2}$.
     \end{enumerate}
-\end{question}
-\newpage
-\ 
-\newpage
+\end{example}
+
+\begin{example}
+    Determine $\displaystyle\lim_{(x, y)\to(0, 0)}\dfrac{\sin(x^2+y^2)}{x^2+y^2}$.
+\end{example}
+
+\begin{definition}[Continuity]
+    We say a function $f$ is continuous at $(x_0, y_0)$ if $$\lim_{(x, y)\to(x_0, y_0)}f(x, y)=f(x_0, y_0).$$ We say a function is continuous if it is continuous at every point in its domain.
+\end{definition}
+
+\begin{example}
+    Determine the conitnuity of the function $f(x, y)=\dfrac{x^2y}{x^2+y^2}$ at $(0, 0)$.
+\end{example}
+
 
 
 \end{document}
