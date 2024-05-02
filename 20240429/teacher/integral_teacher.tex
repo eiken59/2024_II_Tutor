@@ -1,0 +1,475 @@
+% LaTeX Template For MATH 490 @ VCU
+\documentclass[11pt]{article}
+
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{mathtools}
+\usepackage{mdframed}
+\usepackage{tocloft}
+\usepackage{tcolorbox}
+\usepackage{extarrows}
+
+\setlist{nosep}
+% \setlist[enumerate]{label=(\alph*)}
+
+\renewcommand{\arraystretch}{0.75}
+
+\definecolor{defcolor}{RGB}{255,236,236}    % light red
+\definecolor{ngtcolor}{RGB}{255,242,242}    % lighter red
+\definecolor{lnkcolor}{RGB}{0,0,180}        % blue
+\definecolor{thmcolor}{RGB}{236,236,255}    % light blue
+\definecolor{lemcolor}{RGB}{239,239,255}    % lighter blue
+\definecolor{procolor}{RGB}{242,242,255}    % lighter lighter blue
+\definecolor{crlcolor}{RGB}{245,245,255}    % lighter lighter lighter blue
+\definecolor{xmpcolor}{RGB}{255,240,225}    % light orange
+\definecolor{rmkcolor}{RGB}{233,255,235}    % light green
+\definecolor{axicolor}{RGB}{255,255,233}    % light yellow
+\definecolor{notcolor}{RGB}{255,255,244}    % lighter yellow
+\definecolor{whacolor}{RGB}{250,250,250}    % lighter gray
+\definecolor{reccolor}{RGB}{255,244,255}    % lighter purple
+
+\hypersetup{
+    colorlinks,
+    citecolor=lnkcolor,
+    filecolor=lnkcolor,
+    linkcolor=lnkcolor,
+    urlcolor=lnkcolor
+}
+
+\newtheoremstyle{break}
+    {\topsep/1.5} % space above
+    {\topsep/2.2} % space below
+    {}          % body font
+    {}          % indent amount
+    {\rmfamily} % theorem head font
+    {.}          % punctuation after theorem head
+    {\newline}  % space after theorem head
+    {\textbf{\thmname{#1}\thmnumber{ #2}}\thmnote{\text{ (#3)}}}
+                % theorem hed spec. (empty = "normal")
+
+\newtheoremstyle{no_label}
+    {\topsep/1.5} % space above
+    {\topsep/2.2} % space below
+    {}          % body font
+    {}          % indent amount
+    {\rmfamily} % theorem head font
+    {.}          % punctuation after theorem head
+    {\newline}  % space after theorem head
+    {\textbf{\thmname{#1}\thmnumber{}}\thmnote{\text{ (#3)}}}
+                % theorem hed spec. (empty = "normal")
+
+\theoremstyle{break}
+\newmdtheoremenv[
+    backgroundcolor=thmcolor,
+    linecolor=black,
+    linewidth=1pt,
+    topline=true,
+    bottomline=true,
+    rightline=true,
+    skipabove=\topsep/1.5,
+    skipbelow=\topsep/2.2
+]{theorem}{Theorem}[section]
+\newmdtheoremenv[
+    backgroundcolor=crlcolor,
+    linecolor=black,
+    linewidth=1pt,
+    topline=true,
+    bottomline=true,
+    rightline=true,
+    skipabove=\topsep/1.5,
+    skipbelow=\topsep/2.2
+]{corollary}[theorem]{Corollary}
+\newmdtheoremenv[
+    backgroundcolor=lemcolor,
+    linecolor=black,
+    linewidth=1pt,
+    topline=true,
+    bottomline=true,
+    rightline=true,
+    skipabove=\topsep/1.5,
+    skipbelow=\topsep/2.2
+]{lemma}[theorem]{Lemma}
+\newmdtheoremenv[
+    backgroundcolor=axicolor,
+    linecolor=black,
+    linewidth=1pt,
+    topline=true,
+    bottomline=true,
+    rightline=true,
+    skipabove=\topsep/1.5,
+    skipbelow=\topsep/2.2
+]{axiom}[theorem]{Axiom}
+\newmdtheoremenv[
+    backgroundcolor=procolor,
+    linecolor=black,
+    linewidth=1pt,
+    topline=true,
+    bottomline=true,
+    rightline=true,
+    skipabove=\topsep/1.5,
+    skipbelow=\topsep/2.2
+]{proposition}[theorem]{Proposition}
+\newmdtheoremenv[
+    backgroundcolor=notcolor,
+    linecolor=black,
+    linewidth=1pt,
+    topline=true,
+    bottomline=true,
+    rightline=true,
+    skipabove=\topsep/1.5,
+    skipbelow=\topsep/2.2
+]{notation}[theorem]{Notation}
+\newmdtheoremenv[
+    backgroundcolor=defcolor,
+    linecolor=black,
+    linewidth=1pt,
+    topline=true,
+    bottomline=true,
+    rightline=true,
+    skipabove=\topsep/1.5,
+    skipbelow=\topsep/2.2
+]{definition}[theorem]{Definition}
+\newmdtheoremenv[
+    backgroundcolor=ngtcolor,
+    linecolor=black,
+    linewidth=1pt,
+    topline=true,
+    bottomline=true,
+    rightline=true,
+    skipabove=\topsep/1.5,
+    skipbelow=\topsep/2.2
+]{negation}[theorem]{Negation}
+\newmdtheoremenv[
+    backgroundcolor=rmkcolor,
+    linecolor=black,
+    linewidth=1pt,
+    topline=true,
+    bottomline=true,
+    rightline=true,
+    skipabove=\topsep/1.5,
+    skipbelow=\topsep/2.2
+]{remark}[theorem]{Remark}
+\newmdtheoremenv[
+    backgroundcolor=xmpcolor,
+    linecolor=black,
+    linewidth=1pt,
+    topline=true,
+    bottomline=true,
+    rightline=true,
+    skipabove=\topsep/1.5,
+    skipbelow=\topsep/2.2
+]{example}[theorem]{Example}
+\newmdtheoremenv[
+    backgroundcolor=whacolor,
+    linecolor=black,
+    linewidth=1pt,
+    topline=true,
+    bottomline=true,
+    rightline=true,
+    skipabove=\topsep/1.5,
+    skipbelow=\topsep/2.2
+]{problem}[theorem]{Problem}
+\newmdtheoremenv[
+    backgroundcolor=whacolor,
+    linecolor=black,
+    linewidth=1pt,
+    topline=true,
+    bottomline=true,
+    rightline=true,
+    skipabove=\topsep/1.5,
+    skipbelow=\topsep/2.2
+]{exercise}[theorem]{Exercise}
+
+\theoremstyle{no_label}
+\newmdtheoremenv[
+    backgroundcolor=whacolor,
+    linecolor=black,
+    linewidth=1pt,
+    topline=true,
+    bottomline=true,
+    rightline=true,
+    skipabove=\topsep/1.5,
+    skipbelow=\topsep/2.2
+]{question}{Question}
+\newmdtheoremenv[
+    backgroundcolor=reccolor,
+    linecolor=black,
+    linewidth=1pt,
+    topline=true,
+    bottomline=true,
+    rightline=true,
+    skipabove=\topsep/1.5,
+    skipbelow=\topsep/2.2
+]{recall}{Recall}
+
+\DeclareMathOperator{\arcsec}{arcsec}
+\DeclareMathOperator{\arccot}{arccot}
+\DeclareMathOperator{\arccsc}{arccsc}
+\DeclareMathOperator{\interior}{int}
+\DeclareMathOperator{\closure}{cl}
+\DeclareMathOperator{\boundary}{bd}
+
+\newcommand{\differentiate}[1]{\dfrac{\dd}{\dd{#1}}}
+\newcommand{\pdifferentiate}[1]{\dfrac{\partial}{\partial {#1}}}
+\newcommand{\derivative}[2]{\dfrac{\dd{#1}}{\dd{#2}}}
+\newcommand{\scndderivative}{D^2\!\,}
+\newcommand{\highderivative}[1]{D^{#1}\!\,}
+\newcommand{\dirderivative}[1]{D_{#1}\!\,}
+\newcommand{\pderivative}[2]{\dfrac{\partial {#1}}{\partial {#2}}}
+\newcommand{\scndpderivative}[3]{\dfrac{\partial^2 {#1}}{\partial {#3}\partial {#2}}}
+\newcommand{\highpderivative}[4]{\dfrac{\partial^{#2} {#1}}{\partial{#4}\cdots\partial{#3}}}
+\newcommand{\dd}{\text{d}}
+\newcommand{\ddi}{\text{$\,$d}}
+\newcommand{\qqed}{{\hfill$\blacksquare$}}
+\newcommand{\defeq}{\overset{\text{def}}{=}}
+\newcommand{\transpose}{\text{T}}
+\newcommand{\bbR}{\mathbb{R}}
+\newcommand{\bbN}{\mathbb{N}}
+\newcommand{\calL}{\mathcal{L}}
+\newcommand{\bfa}{\textbf{a}}
+\newcommand{\bfc}{\textbf{c}}
+\newcommand{\bfe}{\textbf{e}}
+\newcommand{\bff}{\textbf{f}}
+\newcommand{\bfg}{\textbf{g}}
+\newcommand{\bfh}{\textbf{h}}
+\newcommand{\bfp}{\textbf{p}}
+\newcommand{\bfr}{\textbf{r}}
+\newcommand{\bfv}{\textbf{v}}
+\newcommand{\bfu}{\textbf{u}}
+\newcommand{\bfx}{\textbf{x}}
+\newcommand{\bfy}{\textbf{y}}
+
+
+\linespread{2}
+\setlength{\textwidth}{6.9in}
+\setlength{\textheight}{9.2in}
+\setlength{\oddsidemargin}{-0.2in}
+\setlength{\evensidemargin}{-0.2in}
+\setlength{\topmargin}{-0.2in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\footskip}{0.5in}
+\setlength{\multicolsep}{6.2pt}
+\setlength{\belowdisplayskip}{0pt}
+%\setlength{\belowdisplayshortskip}{0pt}
+\setlength{\abovedisplayskip}{0pt}
+%\setlength{\abovedisplayshortskip}{0pt}
+
+\setcounter{section}{4}
+\numberwithin{equation}{theorem}
+
+\makeatletter
+\newcommand{\vast}{\bBigg@{4}}
+\newcommand{\Vast}{\bBigg@{5}}
+\makeatother
+
+\newcommand*\samethanks[1][\value{footnote}]{\footnotemark[#1]}
+
+\title{\textbf{Calculus A (II) One-to-One Tutoring}\\ \Large Introduction to Integrals}
+\author{Chang, Yung-Hsuan}
+
+\begin{document}
+\maketitle
+
+\begin{definition}[Antiderivative]
+    For a given function $f(x)$, the function $F(x)$ is called an antiderivative of $f$ if $\derivative{F}{x}(x)=f(x)$.
+\end{definition}
+
+\begin{example}
+    Find an antiderivative of the following functions: \vspace{-1em}
+    \begin{multicols}{4}
+        \begin{enumerate}
+            \item $0$;
+            \item $1$;
+            \item $x$;
+            \item $x^3$;
+            \item $x^n$, $n\in\bbN$;
+            \item $\dfrac{1}{x}$;
+            \item $\sin x$;
+            \item $\cos x$;
+            \item $e^x$;
+            \item $\sin 2x$;
+            \item $\cos 2x$;
+            \item $e^{2x}$;
+            \item $\sin kx$;
+            \item $\cos \ell x$;
+            \item $e^{rx}$; and
+            \item $a^x$.
+        \end{enumerate}
+    \end{multicols}
+\end{example}
+
+
+\begin{remark}
+    We use the long crowbar $\displaystyle\int$ and the infinitesimal $\dd x$ to clamp the integrand (usually, a function $f(x)$ in this case) $\displaystyle\int f(x)\ddi x$ to indicate the ``family'' of antiderivatives of $f(x)$. Then we call the family of antiderivatives to be ``(indefinite) integrals.'' It is called indefinite since the difference between each member in the family is a constant but not deemed to be zero.
+\end{remark}
+
+\begin{remark}
+    If the crowbar in an integral is with subscript and superscript, then the integral is called a ``definite integral.''
+\end{remark}
+
+\begin{theorem}[Fundamental Theorem of Calculus]
+    Let $f$ be a continuous function on an interval $[a, b]$ and let $F$ be an antiderivative of $f$. Then
+    \begin{enumerate}
+        \item $\derivative{F}{x}(x)=f(x)$; and
+        \item $\displaystyle\int_a^b f(x)\ddi x=F(b)-F(a)$.
+    \end{enumerate}
+\end{theorem}
+
+\begin{example}
+    Evaluate the following indefinite integrals:\vspace{-1.8em}
+    \begin{multicols}{3}
+        \begin{enumerate}
+            \item $\displaystyle\int 2x\ddi x$;
+            \item $\displaystyle\int x\ddi x$;
+            \item $\displaystyle\int 4x^3\ddi x$;
+            \item $\displaystyle\int x^3\ddi x$;
+            \item $\displaystyle\int (n+1)\cdot x^n\ddi x$, $n\in\bbN$;
+            \item $\displaystyle\int x^n\ddi x$, $n\in\bbN$;
+            \item $\displaystyle\int \dfrac{1}{x}\ddi x$;
+            \item $\displaystyle\int \sin x\ddi x$;
+            \item $\displaystyle\int \cos x\ddi x$;
+            \item $\displaystyle\int e^x\ddi x$;
+            \item $\displaystyle\int \sin 2x\ddi x$;
+            \item $\displaystyle\int \cos 2x\ddi x$;
+            \item $\displaystyle\int e^{2x}\ddi x$;
+            \item $\displaystyle\int \sin kx\ddi x$; and
+            \item $\displaystyle\int \cos \ell x\ddi x$.
+        \end{enumerate}
+    \end{multicols}\vspace{0.1em}
+\end{example}
+
+\begin{exercise}
+    Use Example 3.6, evaluate the following definite integrals:\vspace{-1.8em}
+    \begin{multicols}{3}
+        \begin{enumerate}
+            \item $\displaystyle\int_0^{\sqrt{2}} x\ddi x$;
+            \item $\displaystyle\int_0^{\sqrt{2}} x^3\ddi x$;
+            \item $\displaystyle\int_1^2 \dfrac{1}{x}\ddi x$;
+            \item $\displaystyle\int_0^\pi \sin x\ddi x$;
+            \item $\displaystyle\int_0^\pi \cos x\ddi x$;
+            \item $\displaystyle\int_0^1 e^x\ddi x$;
+            \item $\displaystyle\int_0^\pi \sin 2x\ddi x$;
+            \item $\displaystyle\int_0^\pi \cos 2x\ddi x$; and
+            \item $\displaystyle\int_0^{\frac{1}{2}} e^{2x}\ddi x$.
+        \end{enumerate}
+    \end{multicols}\vspace{0.1em}
+\end{exercise}
+
+
+
+\begin{theorem}[Properties of Definite Integrals]
+    Let $f, g$ be integrable on $[a, b]$. Then the following are true:
+    \begin{enumerate}
+        \item $\displaystyle\int_a^b f(x)\ddi x=-\int_b^a f(x)\ddi x$;
+        \item $\displaystyle\int_a^b f(x)\ddi x=\int_a^c f(x)\ddi x+\int_c^b f(x)\ddi x$ for $c\in[a, b]$;
+        \item $\displaystyle\int_a^b \alpha f(x)+g(x)\ddi x=\alpha\int_a^b f(x)\ddi x+\int_a^b g(x)\ddi x$;
+        \item if $f(x)\geq g(x)$ for all $x\in[a, b]$, then $$\int_a^b f(x)\ddi x\geq\int_a^b g(x)\ddi x;$$
+        \item $|f|$ is integrable;
+        \item $\displaystyle\left|\int_a^b f(x)\ddi x\right|\leq\int_a^b |f(x)|\ddi x$; and
+        \item $fg$ is integrable.
+    \end{enumerate}
+\end{theorem}
+
+\begin{theorem}[Substitution Rule]
+    Suppose that $f$ is continuous on $[c, d]\supseteq[a, b]$ and $\derivative{\phi}{t}(t)$ are conitnuous in $[\alpha, \beta]$ with $\phi(t)\in[c, d]$ for all $t\in[\alpha, \beta]$, where $\alpha=\phi(a)$ and $\beta=\phi(b)$. Then $$\int_a^b f(x)\ddi x=\int_{\alpha}^{\beta}f(\phi(t))\derivative{\phi}{t}(t)\ddi t.$$
+\end{theorem}
+
+\begin{remark}
+    The substitution rule comes from the chain rule.
+\end{remark}
+
+\begin{example}
+    Evaluate $\displaystyle\int\dfrac{2x+1}{x^2+x+1}\ddi x$.
+\end{example}
+
+
+\begin{example}
+    Evaluate $\displaystyle\int x e^{x^2}\ddi x$.
+\end{example}
+
+
+\begin{example}
+    Evaluate $\displaystyle\int\dfrac{\sin\sqrt{x}}{\sqrt{x}}\ddi x$.
+\end{example}
+
+
+\begin{example}
+    Evaluate $\displaystyle\int\dfrac{e^x}{1+e^{2x}}\ddi x$.
+\end{example}
+
+
+\begin{example}
+    Evaluate $\displaystyle\int\dfrac{\ln x}{x}\ddi x$.
+\end{example}
+
+
+\begin{theorem}[Integration by Parts]
+    If the functions $f$ and $g$ are differentiable and their derivatives $\derivative{f}{x}$ and $\derivative{g}{x}$ are continuous on $[a, b]$, then $$\int_a^b f(x)\derivative{g}{x}(x)\ddi x=\left[f(x)g(x)\right]_a^b-\int_a^b g(x)\derivative{f}{x}(x)\ddi x.$$
+\end{theorem}
+
+\begin{remark}[DI Method]
+    For convenience, the DI method is much quicker than think about $f$ and $g$. Choose the most-easily-integrable function $h_1$ to be under I, and the other $h_2$ to be under D. Then use the following table to compute.
+    
+    \begin{center}
+        \begin{tabular}{c c c}
+            & D & I \\
+            $+$ & $h_2(x)$ & $h_1(x)$ \\
+            $-$ & $\derivative{h_2}{x}(x)$ & $\displaystyle\int h_1(x)\ddi x$ \\
+            $+$ & $\derivative{^2h_2}{x^2}(x)$ & $\displaystyle\iint h_1(x)\ddi x\dd x$ \\
+            $-$ & $\derivative{^3h_2}{x^3}(x)$ & $\displaystyle\iiint h_1(x)\ddi x\dd x\dd x$ \\
+            & $\vdots$ & $\vdots$ \\
+            $(-1)^{k}$ & $\derivative{^kh_2}{x^k}(x)$ & $\displaystyle\overbrace{\idotsint}^k h_1(x)\overbrace{\ddi x\cdots\dd x}^k$ \\
+        \end{tabular}
+    \end{center}
+    Then \begin{align*}
+        \int h_2(x)h_1(x)\ddi x&=h_2(x)\cdot\int h_1(x)\ddi x\\
+        &\quad-\derivative{h_2}{x}(x)\cdot\iint h_1(x)\ddi x\\
+        &\quad+\derivative{^2h_2}{x^2}(x)\cdot\iiint h_1(x)\ddi x\dd x\\
+        &\quad-\cdots\\
+        &\quad+(-1)^k\int\derivative{^kh_2}{x^k}(x)\cdot\overbrace{\idotsint}^k h_1(x)\overbrace{\ddi x\cdots\dd x}^k\ddi x.
+    \end{align*}
+\end{remark}
+
+\begin{example}
+    Evaluate $\displaystyle\int\ln x\ddi x$.
+\end{example}
+
+
+\begin{example}
+    Evaluate $\displaystyle\int x^2e^x\ddi x$.
+\end{example}
+
+
+\begin{example}
+    Evaluate $\displaystyle\int e^x\sin x\ddi x$.
+\end{example}
+
+
+\begin{theorem}[Iterated Integral]
+    If $f(x, y)$ is bounded on the rectangle $K=\{(x, y)\in\bbR^2\mid x\in[a, b]\text{\ and\ }y\in[c,d ]\}$ and $$F(y)\coloneq\int_a^b f(x, y)\ddi x$$ is well-defined, then $$\int_K f(x, y)\ddi A=\int_c^d\left(\int_a^b f(x, y)\ddi x\right)\dd y.$$
+\end{theorem}
+
+\begin{example}
+    Evaluate the following integrals:
+    \begin{enumerate}
+        \item $\displaystyle\iint_{K_1}\sin x\cos y\ddi x\ddi y$, $K_1=[0, \frac{\pi}{3}]\times[0, \frac{\pi}{6}]$;
+        \item $\displaystyle\iint_{K_2}e^x\sin y\ddi x\ddi y$, $K_2=[0, 1]\times[0, \alpha]$;
+        \item $\displaystyle\iint_{K_3}x^{2n-1}y^me^{x^ny^{m+1}}\ddi x\ddi y$; and
+        \item $\displaystyle\iint_{K_4}\dfrac{y^2}{x^2y^2+1}\ddi x\ddi y$, $K_4=[0, 1]\times[0, 1]$.
+    \end{enumerate}
+\end{example}
+
+
+\begin{example}
+    Let $D=\{(x, y)\in\bbR^2\mid x\geq 0, y\geq 0,\text{\ and\ }x+y\leq 2\}$. Evaluate $$\iint_D x+y\ddi x\ddi y.$$
+\end{example}
+
+\end{document}
