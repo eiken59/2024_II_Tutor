@@ -1,0 +1,425 @@
+% LaTeX Template For MATH 490 @ VCU
+\documentclass[11pt]{article}
+
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{mathtools}
+\usepackage{mdframed}
+\usepackage{tocloft}
+\usepackage{tcolorbox}
+\usepackage{extarrows}
+
+\setlist{nosep}
+% \setlist[enumerate]{label=(\alph*)}
+
+\renewcommand{\arraystretch}{1}
+
+\definecolor{defcolor}{RGB}{255,236,236}    % light red
+\definecolor{ngtcolor}{RGB}{255,242,242}    % lighter red
+\definecolor{lnkcolor}{RGB}{0,0,180}        % blue
+\definecolor{thmcolor}{RGB}{236,236,255}    % light blue
+\definecolor{lemcolor}{RGB}{239,239,255}    % lighter blue
+\definecolor{procolor}{RGB}{242,242,255}    % lighter lighter blue
+\definecolor{crlcolor}{RGB}{245,245,255}    % lighter lighter lighter blue
+\definecolor{xmpcolor}{RGB}{255,240,225}    % light orange
+\definecolor{rmkcolor}{RGB}{233,255,235}    % light green
+\definecolor{axicolor}{RGB}{255,255,233}    % light yellow
+\definecolor{notcolor}{RGB}{255,255,244}    % lighter yellow
+\definecolor{whacolor}{RGB}{250,250,250}    % lighter gray
+\definecolor{reccolor}{RGB}{255,244,255}    % lighter purple
+
+\hypersetup{
+    colorlinks,
+    citecolor=lnkcolor,
+    filecolor=lnkcolor,
+    linkcolor=lnkcolor,
+    urlcolor=lnkcolor
+}
+
+\newtheoremstyle{break}
+    {\topsep/1.5} % space above
+    {\topsep/2.2} % space below
+    {}          % body font
+    {}          % indent amount
+    {\rmfamily} % theorem head font
+    {.}          % punctuation after theorem head
+    {\newline}  % space after theorem head
+    {\textbf{\thmname{#1}\thmnumber{ #2}}\thmnote{\text{ (#3)}}}
+                % theorem hed spec. (empty = "normal")
+
+\newtheoremstyle{no_label}
+    {\topsep/1.5} % space above
+    {\topsep/2.2} % space below
+    {}          % body font
+    {}          % indent amount
+    {\rmfamily} % theorem head font
+    {.}          % punctuation after theorem head
+    {\newline}  % space after theorem head
+    {\textbf{\thmname{#1}\thmnumber{}}\thmnote{\text{ (#3)}}}
+                % theorem hed spec. (empty = "normal")
+
+\theoremstyle{break}
+\newmdtheoremenv[
+    backgroundcolor=thmcolor,
+    linecolor=black,
+    linewidth=1pt,
+    topline=true,
+    bottomline=true,
+    rightline=true,
+    skipabove=\topsep/1.5,
+    skipbelow=\topsep/2.2
+]{theorem}{Theorem}[section]
+\newmdtheoremenv[
+    backgroundcolor=crlcolor,
+    linecolor=black,
+    linewidth=1pt,
+    topline=true,
+    bottomline=true,
+    rightline=true,
+    skipabove=\topsep/1.5,
+    skipbelow=\topsep/2.2
+]{corollary}[theorem]{Corollary}
+\newmdtheoremenv[
+    backgroundcolor=lemcolor,
+    linecolor=black,
+    linewidth=1pt,
+    topline=true,
+    bottomline=true,
+    rightline=true,
+    skipabove=\topsep/1.5,
+    skipbelow=\topsep/2.2
+]{lemma}[theorem]{Lemma}
+\newmdtheoremenv[
+    backgroundcolor=axicolor,
+    linecolor=black,
+    linewidth=1pt,
+    topline=true,
+    bottomline=true,
+    rightline=true,
+    skipabove=\topsep/1.5,
+    skipbelow=\topsep/2.2
+]{axiom}[theorem]{Axiom}
+\newmdtheoremenv[
+    backgroundcolor=procolor,
+    linecolor=black,
+    linewidth=1pt,
+    topline=true,
+    bottomline=true,
+    rightline=true,
+    skipabove=\topsep/1.5,
+    skipbelow=\topsep/2.2
+]{proposition}[theorem]{Proposition}
+\newmdtheoremenv[
+    backgroundcolor=notcolor,
+    linecolor=black,
+    linewidth=1pt,
+    topline=true,
+    bottomline=true,
+    rightline=true,
+    skipabove=\topsep/1.5,
+    skipbelow=\topsep/2.2
+]{notation}[theorem]{Notation}
+\newmdtheoremenv[
+    backgroundcolor=defcolor,
+    linecolor=black,
+    linewidth=1pt,
+    topline=true,
+    bottomline=true,
+    rightline=true,
+    skipabove=\topsep/1.5,
+    skipbelow=\topsep/2.2
+]{definition}[theorem]{Definition}
+\newmdtheoremenv[
+    backgroundcolor=ngtcolor,
+    linecolor=black,
+    linewidth=1pt,
+    topline=true,
+    bottomline=true,
+    rightline=true,
+    skipabove=\topsep/1.5,
+    skipbelow=\topsep/2.2
+]{negation}[theorem]{Negation}
+\newmdtheoremenv[
+    backgroundcolor=rmkcolor,
+    linecolor=black,
+    linewidth=1pt,
+    topline=true,
+    bottomline=true,
+    rightline=true,
+    skipabove=\topsep/1.5,
+    skipbelow=\topsep/2.2
+]{remark}[theorem]{Remark}
+\newmdtheoremenv[
+    backgroundcolor=xmpcolor,
+    linecolor=black,
+    linewidth=1pt,
+    topline=true,
+    bottomline=true,
+    rightline=true,
+    skipabove=\topsep/1.5,
+    skipbelow=\topsep/2.2
+]{example}[theorem]{Example}
+\newmdtheoremenv[
+    backgroundcolor=whacolor,
+    linecolor=black,
+    linewidth=1pt,
+    topline=true,
+    bottomline=true,
+    rightline=true,
+    skipabove=\topsep/1.5,
+    skipbelow=\topsep/2.2
+]{problem}[theorem]{Problem}
+\newmdtheoremenv[
+    backgroundcolor=whacolor,
+    linecolor=black,
+    linewidth=1pt,
+    topline=true,
+    bottomline=true,
+    rightline=true,
+    skipabove=\topsep/1.5,
+    skipbelow=\topsep/2.2
+]{exercise}[theorem]{Exercise}
+
+\theoremstyle{no_label}
+\newmdtheoremenv[
+    backgroundcolor=whacolor,
+    linecolor=black,
+    linewidth=1pt,
+    topline=true,
+    bottomline=true,
+    rightline=true,
+    skipabove=\topsep/1.5,
+    skipbelow=\topsep/2.2
+]{question}{Question}
+\newmdtheoremenv[
+    backgroundcolor=reccolor,
+    linecolor=black,
+    linewidth=1pt,
+    topline=true,
+    bottomline=true,
+    rightline=true,
+    skipabove=\topsep/1.5,
+    skipbelow=\topsep/2.2
+]{recall}{Recall}
+
+\DeclareMathOperator{\arcsec}{arcsec}
+\DeclareMathOperator{\arccot}{arccot}
+\DeclareMathOperator{\arccsc}{arccsc}
+\DeclareMathOperator{\interior}{int}
+\DeclareMathOperator{\closure}{cl}
+\DeclareMathOperator{\boundary}{bd}
+
+\newcommand{\differentiate}[1]{\dfrac{\dd}{\dd{#1}}}
+\newcommand{\pdifferentiate}[1]{\dfrac{\partial}{\partial {#1}}}
+\newcommand{\derivative}[2]{\dfrac{\dd{#1}}{\dd{#2}}}
+\newcommand{\scndderivative}{D^2\!\,}
+\newcommand{\highderivative}[1]{D^{#1}\!\,}
+\newcommand{\dirderivative}[1]{D_{#1}\!\,}
+\newcommand{\pderivative}[2]{\dfrac{\partial {#1}}{\partial {#2}}}
+\newcommand{\scndpderivative}[3]{\dfrac{\partial^2 {#1}}{\partial {#3}\partial {#2}}}
+\newcommand{\highpderivative}[4]{\dfrac{\partial^{#2} {#1}}{\partial{#4}\cdots\partial{#3}}}
+\newcommand{\dd}{\text{d}}
+\newcommand{\ddi}{\text{$\,$d}}
+\newcommand{\qqed}{{\hfill$\blacksquare$}}
+\newcommand{\defeq}{\overset{\text{def}}{=}}
+\newcommand{\transpose}{\text{T}}
+\newcommand{\bbR}{\mathbb{R}}
+\newcommand{\bbN}{\mathbb{N}}
+\newcommand{\calL}{\mathcal{L}}
+\newcommand{\bfa}{\textbf{a}}
+\newcommand{\bfc}{\textbf{c}}
+\newcommand{\bfe}{\textbf{e}}
+\newcommand{\bff}{\textbf{f}}
+\newcommand{\bfg}{\textbf{g}}
+\newcommand{\bfh}{\textbf{h}}
+\newcommand{\bfp}{\textbf{p}}
+\newcommand{\bfr}{\textbf{r}}
+\newcommand{\bfv}{\textbf{v}}
+\newcommand{\bfu}{\textbf{u}}
+\newcommand{\bfx}{\textbf{x}}
+\newcommand{\bfy}{\textbf{y}}
+
+
+\linespread{2}
+\setlength{\textwidth}{6.9in}
+\setlength{\textheight}{9.2in}
+\setlength{\oddsidemargin}{-0.2in}
+\setlength{\evensidemargin}{-0.2in}
+\setlength{\topmargin}{-0.2in}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\footskip}{0.5in}
+\setlength{\multicolsep}{6.2pt}
+\setlength{\belowdisplayskip}{0pt}
+%\setlength{\belowdisplayshortskip}{0pt}
+\setlength{\abovedisplayskip}{0pt}
+%\setlength{\abovedisplayshortskip}{0pt}
+
+\setcounter{section}{5}
+\numberwithin{equation}{theorem}
+
+\makeatletter
+\newcommand{\vast}{\bBigg@{4}}
+\newcommand{\Vast}{\bBigg@{5}}
+\makeatother
+
+\newcommand*\samethanks[1][\value{footnote}]{\footnotemark[#1]}
+
+\title{\textbf{Calculus A (II) One-to-One Tutoring}\\ \Large Practices on Integrals and Fibini's Theorem}
+\author{Chang, Yung-Hsuan}
+
+\begin{document}
+\maketitle
+
+\begin{example}
+    Evaluate the following indefinite integral: $$\int \dfrac{1}{1-x^2}\ddi x.$$
+\end{example}
+\vspace{10em}
+
+\begin{example}
+    Evalutate the following indefinite integral: $$\int \dfrac{1}{a^2+x^2}\ddi x.$$
+\end{example}
+\vspace{10em}
+
+\begin{example}
+    Evaluate the following indefinite integral: $$\int \dfrac{x^5}{x^3+1}\ddi x.$$
+\end{example}
+\vspace{10em}
+
+\begin{example}
+    Evaluate the following indefinite integral: $$\int \dfrac{x^2+1}{x}\ddi x.$$
+\end{example}
+\vspace{10em}
+
+\begin{example}
+    Evaluate the following indefinite integral: $$\int \cos x\cdot e^{\sin x}\ddi x.$$
+\end{example}
+\vspace{10em}
+
+\begin{example}
+    Evaluate the following indefinite integral: $$\int\dfrac{\sin(\ln t)}{t}\ddi t.$$
+\end{example}
+\vspace{10em}
+
+\begin{example}
+    Evaluate the following indefinite integral: $$\int x(\ln x)^2\ddi x.$$
+\end{example}
+\vspace{10em}
+
+\begin{example}
+    Evaluate the following indefinite integral: $$\int x\sin x\ddi x.$$
+\end{example}
+\vspace{10em}
+
+\begin{example}
+    Evaluate the following indefinite integral: $$\int x\ln x\ddi x.$$
+\end{example}
+\vspace{10em}
+
+\begin{example}
+    Evaluate the following indefinite integral: $$\int \sin x\cos x\ln(\cos x)\ddi x.$$
+\end{example}
+\vspace{10em}
+
+\begin{example}
+    Evaluate the following indefinite integral: $$\int e^x\cos x\ddi x.$$
+\end{example}
+\vspace{10em}
+
+\begin{example}
+    Evaluate $$\int_{0}^{\pi/2}\int_{0}^{\pi/2}\sin x\cos y\ddi x\ddi y.$$
+\end{example}
+\vspace{10em}
+
+\begin{example}
+    Evaluate $$\int_{1}^{2}\int_{0}^{\pi}y\sin(xy)\ddi y\ddi x.$$
+\end{example}
+\newpage
+
+\begin{example}
+    Evaluate $$\iint_D 2y \ddi A,$$ where $D$ is the region bounded by the line $y=x$ and the parabola $y=3x-x^2$.
+\end{example}
+\newpage
+
+\begin{example}
+    Find the volume of the solid that lies under the paraboloid $z=x^2+y^2$ and above the region $D$ in the $xy$-plane bounded by the line $y=2x$ and the parabola $y=x^2$.
+\end{example}
+\newpage
+
+\begin{example}
+    Evaluate $$\iint_D xy\ddi A,$$ where $D$ is the region bounded by the line $y=x-1$ and the parabola $y^2=2x+6$.
+\end{example}
+\newpage
+
+\begin{example}
+    Evaluate $$\int_{0}^{4}\int_{0}^{\sqrt{x}}\dfrac{y}{x^2+1}\ddi y\ddi x.$$
+\end{example}
+\newpage
+
+\begin{example}
+    Evaluate $$\int_{0}^{3}\int_{0}^{y}e^{-y^2}\ddi x\ddi y.$$
+\end{example}
+\newpage
+
+\begin{example}
+    Evaluate $$\int_{0}^{1}\int_{1}^{x}\sin(y^2)\ddi y\ddi x.$$
+\end{example}
+\newpage
+
+\begin{example}
+    Evaluate $$\int_{0}^{1}\int_{3y}^{3}e^{x^2}\ddi x\ddi y.$$
+\end{example}
+\newpage
+
+\begin{example}
+    Evaluate $$\int_{0}^{1}\int_{y}^{1}\dfrac{\sin x}{x}\ddi x\ddi y.$$
+\end{example}
+\newpage
+
+\begin{question}
+    How can we use the substitution rule for multiple integrals?
+\end{question}
+
+\begin{definition}
+    The Jacobian of the transformation $T$ given by $x=g(u, v)$ and $y=h(u, v)$ is $$\dfrac{\partial(x, y)}{\partial(u, v)}\coloneq\begin{vmatrix}
+        \pderivative{x}{u} & \pderivative{x}{v} \\ \pderivative{y}{u} & \pderivative{y}{v}
+    \end{vmatrix}=\pderivative{x}{u}\pderivative{y}{v}-\pderivative{x}{v}\pderivative{y}{u}.$$
+\end{definition}
+
+\begin{theorem}[Change of Variables in a Double Integral]\label{cv di}
+    Suppose that $T$ is a $C^1$ transformation whose Jacobian is nonzero and that $T$ maps a region $S$ in the $uv$-plane onto a region $R$ in the $xy$-plane. Suppose that $f$ is continuous on $R$ and that $R$ and $S$ are type I or type II plane regions. Suppose also that $T$ is one-to-one, except perhaps on the boundary of $S$. Then $$\iint_R f(x, y)\ddi A=\iint_S f(x(u,v), y(u, v))\left|\dfrac{\partial(x, y)}{\partial(u, v)}\right|\ddi u\ddi v.$$
+\end{theorem}
+
+\begin{remark}
+    Notice the correspondence between Theorem \ref*{cv di} and the substitution rule in one-dimensional integrals: $$\int_a^b f(x)\ddi x=\int_{\alpha}^{\beta}f(\phi(t))\derivative{\phi}{t}(t)\ddi t.$$
+\end{remark}
+\newpage
+
+\begin{example}
+    Use the change of variables $\left\{\begin{array}{l}
+        x=u^2-v^2\\
+        y=2uv
+    \end{array}\right.$ to evaluate the integral $$\iint_R y\ddi A,$$ where $R$ is the region bounded by the $x$-axis and the parabolas $y^2=4-4x$, and $y^2=4+4x$ with $y\geq 0$.
+\end{example}
+\newpage
+
+\begin{example}
+    Use the transformation $\left\{\begin{array}{l}
+        u=x-y\\
+        v=x+y
+    \end{array}\right.$ to evaluate $$\iint_R\dfrac{x-y}{x+y}\ddi A,$$ where $R$ is the square with vertices $(0, 2)$, $(1, 1)$, $(2, 2)$, and $(1, 3)$.
+\end{example}
+\newpage
+
+\begin{example}
+    Evaluate the integral $$\iint_R e^{\frac{x+y}{x-y}}\ddi A,$$ where $R$ is the trapezoidal region with vertices $(1, 0)$, $(2, 0)$, $(0, -2)$, and $(0, -1)$.
+\end{example}
+
+\end{document}
